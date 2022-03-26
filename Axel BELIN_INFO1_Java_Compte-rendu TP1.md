@@ -52,7 +52,9 @@
     
     for(int i = 0; i < args.length; i++)
     {
+        
         System.out.println(args[i]) ;
+
     } `
 
     #### Résultat :
@@ -66,7 +68,9 @@
         
     for(var i: args)
     {
+
         System.out.println(i) ;
+
     } `
 
     #### Résultat :
@@ -81,14 +85,22 @@
     `import java.util.Scanner; 
 
     public class Calc {
+
         public static void main(String[] args) {
+
             Scanner scanner;
+
             scanner = new Scanner(System.in);
+
             int value;
+
             value = scanner.nextInt();
+
             System.out.println(value) ;
+
             scanner.close(); // Il faut penser à fermer le scanner à la fin
         }
+
     } `
 
     #### Résultat :
@@ -101,7 +113,8 @@
 2. Indiquer dans le programme où sont les variables et quel est leur type associé. Modifier le programme pour déclarer et initialiser les variables en une seule ligne.
 
         `public static void main(String[] args) {
-    	    Scanner scanner = new Scanner(System.in); `
+    	    Scanner scanner = new Scanner(System.in);
+        }`
 
     - "scanner" est un objet. C'est une instance de la classe Scanner.
         Le mot clé new sert à allouer la mémoire nécessaire pour créer l'instance de la classe Scanner.
@@ -146,7 +159,9 @@
     `import java.util.Scanner;
 
     public class Calc {
+
         public static void main(String[] args) {
+            
             Scanner scanner = new Scanner(System.in) ;
         
             System.out.println("Saisir un entier a $>") ;
@@ -387,7 +402,7 @@
     `x=12,  y=42`
 
     `Point[x=12, y=42]`
-    
+
     `dist = 43.68065933568311`
 
 ## Exercice 5 - De C vers Java
