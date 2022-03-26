@@ -20,8 +20,11 @@
 1. Dans un premier temps, afficher le premier argument de la ligne de commande
     #### Code :
     `public static void main(String[] args) {
+
         System.out.println("Premier arg") ;
+        
         System.out.println(args[0]) ;
+        
     }`
 
     #### Résultat :
