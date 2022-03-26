@@ -24,7 +24,7 @@
         System.out.println("Premier arg") ;
         
         System.out.println(args[0]) ;
-        
+
     }`
 
     #### Résultat :
@@ -93,7 +93,9 @@
 
     #### Résultat :
     `java Calc`
+
     `42`
+
     `42`
 
 2. Indiquer dans le programme où sont les variables et quel est leur type associé. Modifier le programme pour déclarer et initialiser les variables en une seule ligne.
@@ -164,10 +166,13 @@
 
     #### Résultat :
     `java Calc`
+
     `Saisir un entier a $>`
     `41`
+
     `Saisir un entier b $>`
     `42`
+    
     `Result addition :`
     `83`
 
@@ -221,22 +226,29 @@
             
             scanner.close() ;
         }
-    }`
+    } `
 
     #### Résultat :
     `java Calc`
+
     `Saisir un entier a $>`
     `41`
+
     `Saisir un entier b $>`
     `42`
+
     `Result addition :`
     `83`
+
     `Result difference :`
     `-1`
+
     `Result product :`
     `1722`
+
     `Result quotient :`
     `0`
+
     `Result modulo :`
     `41`
 
@@ -251,13 +263,18 @@
 2. Écrire une méthode main qui prend les entiers x et y sur la ligne de commande (3 et 4 dans l'exemple ci-dessus), les convertit en valeurs entières et affiche celles-ci (la ligne x=3, y=4 dans l'exemple).
     #### Code :
     `public record Point(int x, int y) {
+
         public static void main(String[] args) {
+
             System.out.println("x=" + Integer.parseInt(args[0]) + "," + "  " + "y=" + Integer.parseInt(args[1])) ;
+
         }
+
     }`
 
     #### Résultat :
     `java Point 3 4`
+
     `x=3, y=4`
 
 3. Que veut dire "static" pour une méthode ?
@@ -275,7 +292,7 @@
     2. `Point.distance(Point p1, Point p2)` -> statique ("POint" désigne le record Point)
 
 4. Que se passe-t-il lorsque l'un des arguments n'est pas un nombre ? 
-    Si un argument n'est pas un int, on obtient une exception de type NumberFormatException :
+    Si un argument n'est pas un int, on obtient une exception de type `NumberFormatException` :
 	    `java.lang.NumberFormatException: For input string: "toto" at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)`
     Du coup pour corriger ce problème on peut par exemple jeter une exception de type : NullPointerException si args ne contient pas au moins 2 arguments :
 
@@ -290,9 +307,13 @@
 5. Dans le main, ajouter des instructions pour créer un instance du record Point, avec le deux entiers x et y et afficher celui-ci.
     #### Code :
     `public record Point(int x, int y) {
+
         public static void main(String[] args) {
+
             if(args.length < 2) {
+
                 throw new NullPointerException("Usage : 2 arguments x et y") ;
+
             }
     
             Point p = new Point(Integer.parseInt(args[0]), Integer.parseInt(args[1])) ;
@@ -303,7 +324,9 @@
 
     #### Résultat :
     `java Point 3 4`
+
     `x=3, y=4`
+
     `Point[x=3, y=4]`
 
 6. On souhaite ajouter au record Point une méthode d'instance (une méthode non statique) nommée distance qui calcule la distance entre deux points sous forme d'un nombre à virgule flottante.
@@ -345,18 +368,26 @@
 
     #### Résultats (exemples) :
     `$ java Point 3 4`
+
     `x=3, y=4`
+
     `Point[x=3, y=4]`
+
     `dist = 5.0`
 
     `$ java Point 5 7`
     `x=5,  y=7`
+
     `Point[x=5, y=7]`
+
     `dist = 8.602325267042627`
 
     `$ java Point 12 42`
+
     `x=12,  y=42`
+
     `Point[x=12, y=42]`
+    
     `dist = 43.68065933568311`
 
 ## Exercice 5 - De C vers Java
